@@ -64,11 +64,12 @@ function raden(inpppLetter) {
             alert("Game Over! You've reached the maximum number of incorrect guesses.");
         }
     }
+    if (arrayDisplay.join('') == randomWord && count < maxAttempts){
+        guessedCorrectly = true;
+    }
     letterInput.value = '';
     document.querySelector('#fouten').innerHTML ++;
-    if (arrayDisplay.join('') == randomWord){
-        alert('You win!');
-    }
+    
 }
 
 
