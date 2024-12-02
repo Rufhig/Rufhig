@@ -1,0 +1,18 @@
+.win{
+    color: #0A0;
+}
+.lose{
+    color:#A00;
+}
+
+.hide{
+    display: none;
+}
+
+.show{
+    display: block;
+}
+
+body{
+    background-color: #A79;
+}
