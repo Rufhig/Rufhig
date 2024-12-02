@@ -35,7 +35,9 @@ let userLetter = document.getElementById('saus');
 
 let count = 0;
 
-let displayWord = new Array(randomLength).fill('_');
+let arrayDisplay = new Array(randomLength).fill('_');
+
+let displayWord = arrayDisplay;
 
 let maxAttempts = 10;
 
@@ -49,7 +51,7 @@ function raden(inpppLetter) {
     let guessedCorrectly = false;
     for (let i = 0; i < saus.length; i++) { 
         if (saus[i] === inpppLetter) {
-            displayWord[i] = inpppLetter; 
+            arrayDisplay[i] = inpppLetter; 
             guessedCorrectly = true; 
             console.log(displayWord);
         }
@@ -64,6 +66,9 @@ function raden(inpppLetter) {
     }
     letterInput.value = '';
     document.querySelector('#fouten').innerHTML ++;
+    if (arrayDisplay.join('') == randomWord){
+        alert('You win!');
+    }
 }
 
 
