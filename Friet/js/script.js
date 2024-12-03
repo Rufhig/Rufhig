@@ -11,9 +11,9 @@ let count = 0;
 
 
 for (let i = 0; i < imgg.length; i++){
-    imgg[i].src = 'img/deurtoe.png'
+    imgg[i].src = 'img/deurtoe.png';
 }
-    
+   
 
 for (let i = 0; i < imgg.length; i++) {
     linker[i].addEventListener('click',function () {

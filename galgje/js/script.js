@@ -64,8 +64,8 @@ function raden(inpppLetter) {
             alert("Game Over! You've reached the maximum number of incorrect guesses.");
         }
     }
-    if (arrayDisplay.join('') == randomWord && count < maxAttempts){
-        guessedCorrectly = true;
+    if (displayWord.join('') == randomWord && count < maxAttempts && guessedCorrectly){
+        alert('You win!')
     }
     letterInput.value = '';
     document.querySelector('#fouten').innerHTML ++;
@@ -75,15 +75,14 @@ function raden(inpppLetter) {
 
 
 
-
    
-buttonRaden.onclick = function (event) {
+buttonRaden.addEventListener('click',function (event) {
     event.preventDefault(); // Prevent form default behavior if needed 
     let inputLetter = letterInput.value.toLowerCase();
     if (inputLetter.length === 1) {
         raden(letterInput.value);
     };
-};
+});
 
 
 console.log(letters);
