@@ -1,25 +1,32 @@
 
-let randomNumber = Math.floor(Math.random() * 7) + 1;
+const randomNumber = Math.floor(Math.random() * 7);
 
-let counterTonen = document.getElementById('results');
+const counterTonen = document.querySelector('#results');
 
-let imgg = document.getElementsByClassName('deur');
+const imgg = document.querySelectorAll('.deur');
 
-let linker = document.getElementsByClassName('link');
+const linker = document.querySelectorAll('.link');
 
 let count = 0;
 
 
+for (let i = 0; i < imgg.length; i++){
+    imgg[i].src = 'img/deurtoe.png'
+}
+    
+
 for (let i = 0; i < imgg.length; i++) {
-    linker[i].onclick = function () {
-        if (i === randomNumber - 1) {
-            imgg[i].src = 'img/gevonden.png'; 
+    linker[i].addEventListener('click',function () {
+        if (i === randomNumber) {
+            imgg[i].src = 'img/gevonden.png';
             count++;
             counterTonen.innerHTML = 'gevonden in '+ count +' try';
-        } else {
+        } else if (i != randomNumber){
+            imgg[i].src = 'img/deuropen.png'
             count++;
         }
     }
-}
+
+)}
 
 console.log(randomNumber)
