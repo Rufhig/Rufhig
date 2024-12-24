@@ -1,0 +1,24 @@
+*{
+  box-sizing: border-box;
+}
+
+body{
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 960px;
+  background-color: #888;
+}
+
+table{
+  width: 100%;
+  text-align: center;
+}
+
+div{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
